@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  user-scalable=no" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="index.css" />
+    
+    <title>Frontend Mentor | Pricing Component With Toggle</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+  
+    <main>
+      <header>
+        <h1>Our Pricing</h1>
+
+        <div class="toggle">
+          <p>Annually</p>
+          <label class="toggle-box">
+            <input type="checkbox"/>
+            <span class="slider round"></span>
+          </label>
+          <p>Monthly</p>
+        </div>
+      </header>
+
+      <div class="primary" id="show-monthly">
+        <!--Inicio do Cartão Basico-->
+        <div class="content basic">
+          <h1 class="title-content">Basic</h1>
+
+          <p class="dollar" id="Monthly">&dollar;19.99</p>
+          <p class="dollar" id="Yearly">&dollar;199.99</p>
+          <ul class="benefit-content">
+            <li></li>
+            <li>500 GB Storage</li>
+            <li>2 Users Allowed</li>
+            <li>Send up to 3 GB</li>
+          </ul>
+
+          <button class="button-learn-more" id="button__effect">Learn More</button>
+        </div>
+        <!--Fim do Cartão Basico-->
+
+        <!--Inicio do Cartão Profissional-->
+        <div class="content card__pro">
+          <h1 class="title-content card__pro__title">Professional</h1>
+
+          <p class="dollar card__pro__dollar" id="Monthly">&dollar;24.99</p>
+          <p class="dollar card__pro__dollar" id="Yearly">&dollar;249.99</p>
+          <ul class="benefit-content card__pro__li">
+            <li></li>
+            <li>1 TB Storage</li>
+            <li>5 Users Allowed</li>
+            <li>Send up to 10 GB</li>
+          </ul>
+
+          <button class="button-learn-more card__pro__button">
+            Learn More
+          </button>
+        </div>
+        <!--Fim do Cartão Profissional-->
+
+        <!--Inicio do Cartão Mestre-->
+        <div class="content master">
+          <h1 class="title-content">Master</h1>
+
+          <p class="dollar" id="Monthly">&dollar;39.99</p>
+          <p class="dollar" id="Yearly">&dollar;399.99</p>
+          <ul class="benefit-content">
+            <li></li>
+            <li>2 TB Storage</li>
+            <li>10 Users Allowed</li>
+            <li>Send up to 20 GB</li>
+          </ul>
+
+          <button class="button-learn-more" id="button__effect">Learn More</button>
+        </div>
+        <!--Fim do Cartão Mestre-->
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a><br>
+       Coded by
+      <a href="https://github.com/joaovictor333" target="_blank"
+        >joaovictor333</a
+      >.
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

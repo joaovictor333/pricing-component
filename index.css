@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+:root {
+  /*Primary*/
+  --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+  /*Neutral*/
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-size: 15px;
+  
+  font-family: "Montserrat", sans-serif;
+
+  background-image: url(images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+html {
+  background-image: url(images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+header {
+  color: var(--Grayish-Blue);
+  text-align: center;
+  padding: 30px;
+}
+header h1{
+  margin-bottom: 30px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+.toggle p {
+  font-size: 0.9rem;
+  color: hsl(234, 14%, 74%);
+}
+.toggle-box {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 2em;
+}
+.toggle-box input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transition: 0.3s;
+}
+.slider:hover {
+  opacity: 0.7;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#Monthly {
+  display: none;
+}
+
+.show-monthly #Monthly {
+  display: block;
+}
+
+.show-monthly #Yearly {
+  display: none;
+}
+
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  width: 350px;
+  text-align: center;
+  height: 450px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.384);
+  padding: 30px;
+  background-color: white;
+}
+.title-content {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.dollar {
+  font-size: 55px;
+  margin-top: 20px;
+  color: var(--Dark-Grayish-Blue);
+}
+.benefit-content {
+  list-style: none;
+  color: var(--Dark-Grayish-Blue);
+}
+.benefit-content li {
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+  padding: 15px;
+}
+.button-learn-more {
+  padding: 18px;
+  border-radius: 8px;
+  width: 290px;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  margin-top: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.basic { /*Cartão Basico só pra ajeitar as bordas*/
+  border-radius: 10px 0 0 10px;
+}
+.master {/*Cartão Mestre só pra ajeitar as bordas*/
+  border-radius: 0 10px 10px 0;
+}
+
+#button__effect { /*Essa id foi só pra fazer o hover dos botões*/
+  background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  transition: 1s;
+}
+#button__effect:hover {
+  background: white;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid;
+}
+
+/*Inicio do Card Profissional*/
+.card__pro {
+  color: var(--Very-Light-Grayish-Blue);
+  background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  height: 500px;
+  border-radius: 10px;
+}
+.card__pro__title {
+  margin-bottom: 20px;
+}
+
+.card__pro__dollar {
+  color: #ffffff;
+}
+
+.card__pro__li {
+  margin-top: 20px;
+  color: white;
+}
+
+.card__pro__button {
+  margin-top: 28px;
+  color: hsl(237, 63%, 64%);
+}
+
+.card__pro__button:hover {
+  background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: 1px solid;
+  color: white;
+  transition: 0.4s;
+}
+/*Fim do Card Profissional*/
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  padding: 33px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+
+  .primary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content{
+    margin: 20px;
+    max-width: 325px ;/*375*/
+    
+    border-radius: 10px;
+  }
+  .button-learn-more{
+    width: 100%;
+  }
+}
