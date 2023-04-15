@@ -14,23 +14,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
   font-size: 15px;
-  
+
   font-family: "Montserrat", sans-serif;
 
-  background-image: url(images/bg-bottom.svg);
   background-repeat: no-repeat;
-  background-position: left bottom;
+  background-image: url(images/bg-top.svg);
+  
+  background-position: top right;
 }
 
-html {
-  background-image: url(images/bg-top.svg);
+html{
+  background-image: url(images/bg-bottom.svg);
+  background-position-y: 630px;
+ 
   background-repeat: no-repeat;
-  background-position: top right;
 }
 
 header {
@@ -38,7 +39,7 @@ header {
   text-align: center;
   padding: 30px;
 }
-header h1{
+header h1 {
   margin-bottom: 30px;
 }
 
@@ -148,24 +149,31 @@ input:checked + .slider:before {
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 1px;
+ transition: 0.7s all;
 }
-
-.basic { /*Cartão Basico só pra ajeitar as bordas*/
+.button-learn-more:hover{
+  transition: 0.7s all;
+}
+.basic {
+  /*Cartão Basico só pra ajeitar as bordas*/
   border-radius: 10px 0 0 10px;
 }
-.master {/*Cartão Mestre só pra ajeitar as bordas*/
+.master {
+  /*Cartão Mestre só pra ajeitar as bordas*/
   border-radius: 0 10px 10px 0;
 }
 
-#button__effect { /*Essa id foi só pra fazer o hover dos botões*/
+#button__effect {
+  /*Essa id foi só pra fazer o hover dos botões*/
   background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: white;
-  transition: 1s;
+  transition: 0.7s all;
 }
 #button__effect:hover {
   background: white;
   color: hsl(237, 63%, 64%);
-  border: 1px solid;
+  border: 1px solid; 
+  transition: 0.7s all;
 }
 
 /*Inicio do Card Profissional*/
@@ -197,7 +205,8 @@ input:checked + .slider:before {
   background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   border: 1px solid;
   color: white;
-  transition: 0.4s;
+  transition: 0.7s all;
+  
 }
 /*Fim do Card Profissional*/
 
@@ -208,27 +217,28 @@ input:checked + .slider:before {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   letter-spacing: 2px;
-  
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 @media screen and (max-width: 768px) {
-
-  .primary{
+  html{
+    background-position-y: 95em;
+  }
+  .primary {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .content{
+  .content {
     margin: 20px;
-    max-width: 325px ;/*375*/
-    
+    max-width: 325px; /*375*/
+
     border-radius: 10px;
   }
-  .button-learn-more{
+  .button-learn-more {
     width: 100%;
   }
 }
